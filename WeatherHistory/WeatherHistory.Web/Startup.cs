@@ -44,6 +44,11 @@ namespace WeatherHistory.Web
 
                 api.UseWebApi(config);
             });
+
+            // Add Nancy to the OWIN pipeline at the end so it handles anything
+            //  that WebAPI doesn't
+            //
+            appBuilder.UseNancy();
         }
     }
 }
