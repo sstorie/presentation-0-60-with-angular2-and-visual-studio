@@ -19,10 +19,26 @@ namespace WeatherHistory.Web
 
                 config.MapHttpAttributeRoutes();
 
+                // Change the API serialization so it does camelCase for
+                //  all properties
+                //
+                var jsonFormatter = config.Formatters.JsonFormatter;
+                var settings = jsonFormatter.SerializerSettings;
+                settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
                 config.EnableSwagger(c =>
                 {
+                    // Since we mapped the API, we also need to tell Swashbuckle about that
+                    //
                     c.RootUrl(req => SwaggerDocsConfig.DefaultRootUrlResolver(req) + "/api");
+
+                    // Just add a little meta-data to the API
+                    //
                     c.SingleApiVersion("v1", "Weather History API");
+
+                    // Enable the descriptions in by including all the XML comments
+                    //
+                    c.IncludeXmlComments($@"{System.AppDomain.CurrentDomain.BaseDirectory}\bin\WeatherHistory.Web.XML");
                 })
                 .EnableSwaggerUi();
 
