@@ -23,6 +23,8 @@ To checkout the code at a given step simply clone the repo and run a command lik
 
 That will get you at step 4 of the code and you can experiement from there.
 
+*Note, some of the steps contain a folder called `source`. Please ignore this as it was a mistake I'm not sure how to go about correcting without rebuilding the repo steps. The `WeatherHistory` folder contains the real code.*
+
 ## Related blog posts
 
 I also wrote up a couple of blog posts that go into some more detail about my experiences using Visual Studio for API and Angular 2 development. Here are the links to those:
