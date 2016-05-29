@@ -22,8 +22,7 @@ import {ZipcodeWeather, ZipcodeWeatherMapper, HistoricalTemperature} from "./zip
 export class AppComponent {
     zipcode: string;
     zipcodeWeather: ZipcodeWeather;
-
-    // Add the error message property
+    errorMessage: string;
 
     loading = false;
 
@@ -43,7 +42,7 @@ export class AppComponent {
 
 
     loadWeather() {
-        // reset errorMessage
+        this.errorMessage = undefined;
         this.zipcodeWeather = undefined;
         this.loading = true;
 
@@ -84,7 +83,7 @@ export class AppComponent {
                 ];
             },
             (error: Response) => {
-                // Save the error json to errorMessage
+                this.errorMessage = error.json().message;
                 this.loading = false;
             });
     }

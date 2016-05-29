@@ -12,7 +12,9 @@
         Loading weather data...
     </div>
 
-    <!-- Add the error div using errorMessage -->
+    <div class="error" *ngIf="errorMessage">
+        {{errorMessage}}
+    </div>
 
     <div class="result" *ngIf="zipcodeWeather">
         <span>{{zipcodeWeather.city}}, {{zipcodeWeather.state}}</span>

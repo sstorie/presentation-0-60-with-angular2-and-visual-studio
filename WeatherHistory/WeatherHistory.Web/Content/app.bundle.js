@@ -52041,7 +52041,6 @@
 	var AppComponent = (function () {
 	    function AppComponent(http) {
 	        this.http = http;
-	        // Add the error message property
 	        this.loading = false;
 	        this.barChartOptions = {
 	            scaleShowVerticalLines: false,
@@ -52052,7 +52051,7 @@
 	    }
 	    AppComponent.prototype.loadWeather = function () {
 	        var _this = this;
-	        // reset errorMessage
+	        this.errorMessage = undefined;
 	        this.zipcodeWeather = undefined;
 	        this.loading = true;
 	        // Make the API call using standard Angular 2
@@ -52087,7 +52086,7 @@
 	                }
 	            ];
 	        }, function (error) {
-	            // Save the error json to errorMessage
+	            _this.errorMessage = error.json().message;
 	            _this.loading = false;
 	        });
 	    };
@@ -52455,13 +52454,13 @@
 /* 333 */
 /***/ function(module, exports) {
 
-	module.exports = ":host {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.application {\n  -webkit-box-flex: 0.5;\n      -ms-flex: 0.5;\n          flex: 0.5; }\n\n.flex-col {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n\n.result {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-top: 15px; }\n"
+	module.exports = ":host {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n\n.application {\n  -webkit-box-flex: 0.5;\n      -ms-flex: 0.5;\n          flex: 0.5; }\n\n.flex-col {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column; }\n\n.error {\n  margin-top: 20px;\n  padding: 10px;\n  background-color: red;\n  color: white; }\n\n.result {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-top: 15px; }\n"
 
 /***/ },
 /* 334 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"application flex-col\">\r\n    <div>\r\n        <input type=\"text\"\r\n               (keyUp.enter)=\"loadWeather()\"\r\n               [(ngModel)]=\"zipcode\" />\r\n        <button (click)=\"loadWeather()\">\r\n            Load weather\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"loading\" *ngIf=\"loading\">\r\n        Loading weather data...\r\n    </div>\r\n\r\n    <!-- Add the error div using errorMessage -->\r\n\r\n    <div class=\"result\" *ngIf=\"zipcodeWeather\">\r\n        <span>{{zipcodeWeather.city}}, {{zipcodeWeather.state}}</span>\r\n        <span>{{zipcodeWeather.latitude}} {{zipcodeWeather.longitude}}</span>\r\n\r\n        <base-chart class=\"chart\"\r\n                    [datasets]=\"barChartData\"\r\n                    [labels]=\"barChartLabels\"\r\n                    [options]=\"barChartOptions\"\r\n                    [legend]=\"barChartLegend\"\r\n                    [chartType]=\"barChartType\"></base-chart>\r\n    </div>\r\n</div>\r\n";
+	module.exports = "<div class=\"application flex-col\">\r\n    <div>\r\n        <input type=\"text\"\r\n               (keyUp.enter)=\"loadWeather()\"\r\n               [(ngModel)]=\"zipcode\" />\r\n        <button (click)=\"loadWeather()\">\r\n            Load weather\r\n        </button>\r\n    </div>\r\n\r\n    <div class=\"loading\" *ngIf=\"loading\">\r\n        Loading weather data...\r\n    </div>\r\n\r\n    <div class=\"error\" *ngIf=\"errorMessage\">\r\n        {{errorMessage}}\r\n    </div>\r\n\r\n    <div class=\"result\" *ngIf=\"zipcodeWeather\">\r\n        <span>{{zipcodeWeather.city}}, {{zipcodeWeather.state}}</span>\r\n        <span>{{zipcodeWeather.latitude}} {{zipcodeWeather.longitude}}</span>\r\n\r\n        <base-chart class=\"chart\"\r\n                    [datasets]=\"barChartData\"\r\n                    [labels]=\"barChartLabels\"\r\n                    [options]=\"barChartOptions\"\r\n                    [legend]=\"barChartLegend\"\r\n                    [chartType]=\"barChartType\"></base-chart>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }
 /******/ ]);

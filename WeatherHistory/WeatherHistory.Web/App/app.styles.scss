@@ -1,5 +1,6 @@
 ﻿
-// Define variables for the error div
+$error-background: red;
+$error-color: white;
 
 :host {
 	display: flex;
@@ -16,7 +17,12 @@
     flex-direction: column;
 }
 
-// Define the .error class
+.error {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: $error-background;
+    color: $error-color;
+}
 
 .result {
     display: flex;
