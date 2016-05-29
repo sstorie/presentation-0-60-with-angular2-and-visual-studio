@@ -10,6 +10,8 @@ TODO - I will post a link here once the talk is complete.
 
 This repository contains the presentation and the source code for the example I use during the talk. This repo has been tagged with multiple steps to make it easy to walk through the progress yourself. Here's an outline of the available tags:
 
+*Note, the steps all contain a folder called `source`. Please ignore this as it was a mistake I'm not sure how to go about correcting without rebuilding the repo steps. The `WeatherHistory` folder contains the real code.*
+
 - [Step 1](https://github.com/sstorie/presentation-0-60-with-angular2-and-visual-studio/tree/step-1) - An empty ASP.NET 4.5 project with all required NuGet packages already added
 - [Step 2](https://github.com/sstorie/presentation-0-60-with-angular2-and-visual-studio/tree/step-2) - A basic API scaffold with Swagger enabled (via the Swashbuckle library)
 - [Step 3](https://github.com/sstorie/presentation-0-60-with-angular2-and-visual-studio/tree/step-3) - The fully complete API with Swagger updated to include XML comments
@@ -21,9 +23,7 @@ To checkout the code at a given step simply clone the repo and run a command lik
 
 `git checkout tags/step-4 -f`
 
-That will get you at step 4 of the code and you can experiement from there.
-
-*Note, some of the steps contain a folder called `source`. Please ignore this as it was a mistake I'm not sure how to go about correcting without rebuilding the repo steps. The `WeatherHistory` folder contains the real code.*
+That will get you to step 4 of the code and you can experiment from there.
 
 ## Related blog posts
 
