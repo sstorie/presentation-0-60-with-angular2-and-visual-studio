@@ -1,0 +1,25 @@
+﻿
+// Define variables for the error div
+
+:host {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.application {
+	flex: 0.5;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+// Define the .error class
+
+.result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
