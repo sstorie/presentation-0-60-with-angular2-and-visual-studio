@@ -6,6 +6,10 @@ This is a presentation I first gave at the AngularMN meetup on June 2, 2016. The
 
 TODO - I will post a link here once the talk is complete.
 
+## The slides
+
+This is not a slide heavy talk, so there isn't much available, but the few slides I do have are [available here](slides) or via [Google Docs](https://docs.google.com/presentation/d/1HSwWHnjqRyLL9h5MfhrFqFVKwmhh3zbJIJMApKtv_-4/pub?start=false&loop=false&delayms=3000).
+
 ## Explanation of this repository
 
 This repository contains the presentation and the source code for the example I use during the talk. This repo has been tagged with multiple steps to make it easy to walk through the progress yourself. Here's an outline of the available tags:
