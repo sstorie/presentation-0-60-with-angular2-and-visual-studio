@@ -29,12 +29,19 @@ To checkout the code at a given step simply clone the repo and run a command lik
 
 That will get you to step 4 of the code and you can experiment from there.
 
-## Related blog posts
+## Related blog posts & resources
 
 I also wrote up a couple of blog posts that go into some more detail about my experiences using Visual Studio for API and Angular 2 development. Here are the links to those:
 
 - [0 - 60 with Angular 2 & Visual Studio - Part 1](https://blog.sstorie.com/0-60-with-angular-2-and-visual-studio-part-1/)
 - [0 - 60 with Angular 2 & Visual Studio - Part 2](https://blog.sstorie.com/0-60-with-angular-2-and-visual-studio-part-2/)
+
+Since we're working with Visual Studio in this talk there are also a couple nice extensions that might help improve your experience. Here's links to a few that you might be interested in:
+
+- [NPM Task Runner extension](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941) (free)
+- [Web Essentials 2015](https://visualstudiogallery.msdn.microsoft.com/ee6e6d8c-c837-41fb-886a-6b50ae2d06a2) (free)
+- [Productivity Power Tools](https://visualstudiogallery.msdn.microsoft.com/34ebc6a2-2777-421d-8914-e29c1dfa7f5d) (free)
+- [ReSharper](https://www.jetbrains.com/resharper/) (not free) - Love it or hate it...I find it useful and worth paying for.
 
 ## Have any comments or feedback?
 
