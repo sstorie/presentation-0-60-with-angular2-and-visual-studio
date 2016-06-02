@@ -4,7 +4,9 @@ This is a presentation I first gave at the AngularMN meetup on June 2, 2016. The
 
 ## The talk itself
 
-TODO - I will post a link here once the talk is complete.
+I think we had some difficulties with actually sharing my screen, so it's pretty hard to see the slides unfortunatlely, but here's a link to the recording:
+
+https://www.youtube.com/watch?v=UXXsj8YC6rI
 
 ## The slides
 
