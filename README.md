@@ -29,6 +29,10 @@ To checkout the code at a given step simply clone the repo and run a command lik
 
 That will get you to step 4 of the code and you can experiment from there.
 
+##### CAUTION now that Angular 2 RC1 is not the latest release
+
+Unfortunately I was alerted to an issue with the package.json where some of the angular modules used `^` in their version string, but others did not. Now that RC2 is released you will end up with mixed versions when running `npm install`. This will cause problems, so if you grab an earlier step in the code you should update `package.json` to ensure the RC1 version is installed. Sorry for the issue, but this has been fixed in the master branch of the code.
+
 ## Related blog posts & resources
 
 I also wrote up a couple of blog posts that go into some more detail about my experiences using Visual Studio for API and Angular 2 development. Here are the links to those:
